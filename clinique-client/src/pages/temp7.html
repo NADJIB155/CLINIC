@@ -1,0 +1,218 @@
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>HealthSync Secure Messaging - Compose</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec5b13",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221610",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Public Sans', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .active-nav { background-color: rgba(236, 91, 19, 0.1); border-left: 4px solid #ec5b13; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="flex h-screen overflow-hidden">
+<!-- Sidebar -->
+<aside class="w-64 flex-shrink-0 bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800 flex flex-col">
+<div class="p-6 flex items-center gap-3">
+<div class="bg-primary p-1.5 rounded-lg">
+<span class="material-symbols-outlined text-white">health_and_safety</span>
+</div>
+<h1 class="text-xl font-bold tracking-tight text-slate-900 dark:text-white">HealthSync</h1>
+</div>
+<div class="px-4 mb-6">
+<div class="flex items-center gap-3 p-3 bg-slate-100 dark:bg-slate-800 rounded-xl">
+<img alt="Dr. Smith" class="w-10 h-10 rounded-full object-cover shadow-sm" data-alt="Professional portrait of a male doctor" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcGo6sQ4ZsZDGjYqquoa_l427B17DqSMZ415Lpn27hmK_7a5oaX98r6vNnJ4BptvdPRyu-0j77TOh8rsVYeWIRkQZeNqIjzu6YKtiZjnrOneK1eSJ2IMuqhmHNH6HY1eLRpKvA0npO5FE8O-2xLBwKLUmOB94-0QeeDeSaSSDtq7o5nIHjcLVgNJ11Z2EVtmM4yyfIJGpKVMjfGgx5EGJECywp8l254Kn89SYfkUH-jh2x8vfGRRaX9znSWUzO2sJNh7q0oWOjYjw"/>
+<div class="overflow-hidden">
+<p class="text-sm font-semibold truncate">Dr. Julian Smith</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Cardiologist</p>
+</div>
+</div>
+</div>
+<nav class="flex-1 px-2 space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-medium">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined">groups</span>
+<span class="font-medium">Patients</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-primary active-nav rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined">mail</span>
+<span class="font-medium">Messages</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined">calendar_today</span>
+<span class="font-medium">Schedule</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined">description</span>
+<span class="font-medium">Reports</span>
+</a>
+</nav>
+<div class="p-4 border-t border-slate-200 dark:border-slate-800">
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-3 px-4 rounded-xl flex items-center justify-center gap-2 transition-all">
+<span class="material-symbols-outlined text-sm">edit</span>
+                    New Message
+                </button>
+</div>
+</aside>
+<!-- Main Content Area -->
+<div class="flex-1 flex flex-col min-w-0">
+<!-- Header -->
+<header class="h-16 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between px-8">
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-2 text-slate-500 text-sm">
+<span>Messages</span>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<span class="text-slate-900 dark:text-white font-medium">New Message</span>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative w-64">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-lg">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-slate-100 dark:bg-slate-800 border-none rounded-xl text-sm focus:ring-2 focus:ring-primary/50 transition-all" placeholder="Search records..." type="text"/>
+</div>
+<button class="p-2 text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-primary rounded-full border-2 border-white dark:border-slate-900"></span>
+</button>
+<button class="p-2 text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full">
+<span class="material-symbols-outlined">settings</span>
+</button>
+</div>
+</header>
+<!-- Content -->
+<main class="flex-1 overflow-y-auto p-8 bg-background-light dark:bg-background-dark">
+<div class="max-w-4xl mx-auto">
+<div class="mb-8 flex justify-between items-end">
+<div>
+<h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-2">Compose Secure Message</h2>
+<p class="text-slate-500 dark:text-slate-400 flex items-center gap-2">
+<span class="material-symbols-outlined text-green-500 text-lg">lock</span>
+                                End-to-end encrypted medical communication
+                            </p>
+</div>
+</div>
+<!-- Composition Form -->
+<div class="bg-white dark:bg-slate-900 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-800 overflow-hidden">
+<!-- Recipient Selection -->
+<div class="p-6 border-b border-slate-100 dark:border-slate-800">
+<div class="flex flex-col gap-2">
+<label class="text-sm font-semibold text-slate-700 dark:text-slate-300">Recipient</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">person_search</span>
+<select class="w-full pl-12 pr-4 py-3 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all appearance-none cursor-pointer">
+<option disabled="" selected="" value="">Search patient by name or medical record number (MRN)</option>
+<option value="1">Sarah Jenkins (MRN: 4829-X)</option>
+<option value="2">Michael Chen (MRN: 9931-A)</option>
+<option value="3">Robert Wilson (MRN: 1102-L)</option>
+<option value="4">Elena Rodriguez (MRN: 7754-C)</option>
+</select>
+<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Subject -->
+<div class="p-6 border-b border-slate-100 dark:border-slate-800">
+<div class="flex flex-col gap-2">
+<label class="text-sm font-semibold text-slate-700 dark:text-slate-300">Subject</label>
+<input class="w-full px-4 py-3 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all" placeholder="e.g., Follow-up on recent Lab Results" type="text"/>
+</div>
+</div>
+<!-- Formatting Toolbar (Simple) -->
+<div class="px-6 py-2 bg-slate-50 dark:bg-slate-800/50 flex items-center gap-1 border-b border-slate-100 dark:border-slate-800">
+<button class="p-2 hover:bg-slate-200 dark:hover:bg-slate-700 rounded text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined text-xl">format_bold</span>
+</button>
+<button class="p-2 hover:bg-slate-200 dark:hover:bg-slate-700 rounded text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined text-xl">format_italic</span>
+</button>
+<button class="p-2 hover:bg-slate-200 dark:hover:bg-slate-700 rounded text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined text-xl">format_list_bulleted</span>
+</button>
+<div class="h-6 w-px bg-slate-300 dark:bg-slate-700 mx-2"></div>
+<button class="p-2 hover:bg-slate-200 dark:hover:bg-slate-700 rounded text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined text-xl">attach_file</span>
+</button>
+<button class="p-2 hover:bg-slate-200 dark:hover:bg-slate-700 rounded text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined text-xl">image</span>
+</button>
+</div>
+<!-- Message Body -->
+<div class="p-6">
+<label class="text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2 block">Message Body</label>
+<textarea class="w-full px-4 py-3 bg-white dark:bg-slate-900 border-none rounded-xl focus:ring-0 transition-all resize-none text-slate-800 dark:text-slate-200" placeholder="Write your secure message here..." rows="12"></textarea>
+</div>
+<!-- Action Buttons -->
+<div class="p-6 bg-slate-50 dark:bg-slate-800/30 flex items-center justify-between">
+<div class="flex items-center gap-4">
+<button class="text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 font-medium transition-colors">Discard</button>
+<button class="text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 font-medium transition-colors">Save Draft</button>
+</div>
+<div class="flex items-center gap-3">
+<div class="flex items-center gap-2 text-xs text-slate-400 dark:text-slate-500 mr-4">
+<span class="material-symbols-outlined text-sm">verified</span>
+                                    HIPAA Compliant
+                                </div>
+<button class="bg-primary hover:bg-primary/90 text-white font-bold py-3 px-8 rounded-xl flex items-center gap-2 shadow-lg shadow-primary/20 transition-all">
+                                    Send Message
+                                    <span class="material-symbols-outlined text-lg">send</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Additional Sidebar/Context Info -->
+<div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="p-5 bg-primary/10 rounded-2xl border border-primary/20">
+<div class="flex items-center gap-3 mb-3">
+<span class="material-symbols-outlined text-primary">info</span>
+<h4 class="font-bold text-slate-900 dark:text-white">Message Guidelines</h4>
+</div>
+<ul class="text-sm text-slate-600 dark:text-slate-400 space-y-2 list-disc pl-4">
+<li>Always verify the patient identity via MRN before sending.</li>
+<li>Include clear instructions for follow-up actions.</li>
+<li>Avoid sharing unconfirmed results via message.</li>
+</ul>
+</div>
+<div class="p-5 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="flex items-center gap-3 mb-3">
+<span class="material-symbols-outlined text-primary">history</span>
+<h4 class="font-bold text-slate-900 dark:text-white">Recent Contacts</h4>
+</div>
+<div class="flex gap-2">
+<img alt="Sarah J." class="w-10 h-10 rounded-full border-2 border-primary/10 cursor-pointer hover:border-primary transition-all" data-alt="Female patient portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcI11TDlUuoBCIqf3yvlpjcNqYuxVk0qTd4X0wUD9tKUW-u4KfavkHDpBgtOdEUrWRcl1DZwpdX81DFyUhtBtpKhvXMltsOziIOzlpuqkjzyBH43V27lFEMUbzmlaPuJnlD6fBmMKkMagZXCFgkkPC40clbEuSlVoNx-y0OL61REEq5Nh61zsvQyvB6nQpwdZtb7Hz-LWIKYYeeLMAFJBdxs1ia8UtiYMFbB1gIMzedCb2LXO8l774zY-b19TY5TWlLD_3hjO2VPI"/>
+<img alt="Michael C." class="w-10 h-10 rounded-full border-2 border-primary/10 cursor-pointer hover:border-primary transition-all" data-alt="Male patient portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD38zZzPZA8wzQhbAxz5KrGev2xNm7b8nw9CCrIsmI4dTfbuJtJImlU1F5-BGOnSTZWJDVkugKMMWGR5jINfgfgUQJcCoq3nyROjtK5w3UCi4SBZOhMymos_rGMgpO5YdxyyVqKNc93MyeWvo4falkqCbVmOcTcochCzG_jNPMfifJYFm5kgg6OPSC43XCAsQZGN197UZ0tOg2WOONLUfB0PHvLS5ZvlLUXeyk7N5fCEpZX4gBWyK_H5rBLEuAS9SrNEJzhm_N1_hw"/>
+<img alt="Robert W." class="w-10 h-10 rounded-full border-2 border-primary/10 cursor-pointer hover:border-primary transition-all" data-alt="Male patient portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBj_Pw2iU_1gemy3Rqd9l24KiKdI2hs6lJaxq-OrojFdA799ms4esZuAfez4kVYy3yyCPeSCr3JDywUIOGj7BqzkcfYkW4AA1XWkiPIPNR6Tro2LQMpVRdPHrl6FsZGe-uA0kwY2gDVy5pjKHo3P9vAeY_BChRjt9LV0vT4Wcc4tZhpRDXyzgcf-RNEzJLQ8JNfWH1AM1cl9a-Z_O0fxbDoUtt5mnPytHgUNFd12R2gHij_T76jmEhxyxrMA--fLAZcn0CyNUuhDj4"/>
+<div class="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-400 cursor-pointer hover:bg-slate-200 transition-all">
+<span class="material-symbols-outlined text-lg">add</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+</body></html>

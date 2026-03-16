@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>HealthSync Video Consultation</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec5b13",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221610",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Public Sans', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .fill-1 { font-variation-settings: 'FILL' 1; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased">
+<div class="relative flex h-screen w-full flex-col overflow-hidden">
+<!-- Top Navigation Bar -->
+<header class="flex h-16 items-center justify-between border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-background-dark px-6 shrink-0">
+<div class="flex items-center gap-4">
+<div class="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-3xl">medical_services</span>
+</div>
+<div>
+<h2 class="text-lg font-bold leading-tight tracking-tight">HealthSync <span class="text-primary">Live</span></h2>
+<p class="text-xs text-slate-500 dark:text-slate-400 font-medium uppercase tracking-wider">Telehealth Session #88291</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="hidden md:flex flex-col items-end mr-4">
+<p class="text-sm font-semibold">Dr. Sarah Jenkins</p>
+<p class="text-xs text-green-600 dark:text-green-400 flex items-center gap-1">
+<span class="size-2 rounded-full bg-green-500"></span> 00:14:22
+                    </p>
+</div>
+<button class="flex size-10 items-center justify-center rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 transition-colors">
+<span class="material-symbols-outlined">settings</span>
+</button>
+<button class="flex size-10 items-center justify-center rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 transition-colors">
+<span class="material-symbols-outlined">help</span>
+</button>
+</div>
+</header>
+<main class="flex flex-1 overflow-hidden">
+<!-- Left Sidebar: Records (Doctor View) -->
+<aside class="hidden lg:flex w-72 flex-col border-r border-slate-200 dark:border-slate-800 bg-white dark:bg-background-dark overflow-y-auto">
+<div class="p-6">
+<div class="mb-6">
+<h3 class="text-sm font-bold uppercase text-slate-400 tracking-widest mb-4">Patient Profile</h3>
+<div class="flex items-center gap-3 p-3 rounded-xl bg-slate-50 dark:bg-slate-800/50">
+<div class="size-12 rounded-full bg-slate-300 dark:bg-slate-700 overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Patient profile portrait of a woman" src="https://lh3.googleusercontent.com/aida-public/AB6AXuArbn3x4lH8Idzzgjw9-ldTSYXeFkHre3jWVFvHm2gCIp8AvYAekIosA-k3VZQAz1eBPGwulmNypku_MWutjqUHa9Se341BH83QmbEj8F_MoOXoXmpVRXgg_hTZiChrAEzANfl2eNh0yvKoBo_tFQd16c3pT3O1nP6rOwlACkl6VNADEInuahlzR1VYrXOoR85ys7PUJXe1XHTowE8r2hu_tli5Uz0xSjiva4fMTJqVJV81ZYLdMN4jjzQCQ2RmB-a5YbUBWz_8c1M"/>
+</div>
+<div>
+<p class="font-bold text-sm">Elena Rodriguez</p>
+<p class="text-xs text-slate-500">Age: 32 | Female</p>
+</div>
+</div>
+</div>
+<nav class="space-y-1">
+<a class="flex items-center gap-3 px-3 py-3 rounded-xl bg-primary text-white font-medium" href="#">
+<span class="material-symbols-outlined fill-1">folder_shared</span>
+<span class="text-sm">Medical Records</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-3 rounded-xl text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 font-medium" href="#">
+<span class="material-symbols-outlined">history</span>
+<span class="text-sm">Visit History</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-3 rounded-xl text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 font-medium" href="#">
+<span class="material-symbols-outlined">pill</span>
+<span class="text-sm">Prescriptions</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-3 rounded-xl text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 font-medium" href="#">
+<span class="material-symbols-outlined">monitoring</span>
+<span class="text-sm">Vitals &amp; Labs</span>
+</a>
+</nav>
+</div>
+</aside>
+<!-- Center: Video Area -->
+<section class="relative flex flex-1 flex-col bg-slate-100 dark:bg-slate-900 p-4">
+<div class="relative flex-1 overflow-hidden rounded-2xl bg-slate-200 dark:bg-black shadow-inner">
+<!-- Main Video Feed (Patient) -->
+<img class="absolute inset-0 h-full w-full object-cover" data-alt="Patient video feed showing a young woman in a room" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKV0S3AnTe2bOSBwNB7oqmyzBSiryRMi5wgMAVTZzQ3g_NrUPDi_umrBcjN2lHr4W4K2-n7P_AwOejBSuSfaBAXBZItbCyI6xRlT5xlAZuV5E68XrmnpnVDB9XyeFB9BQpThCStOytOlyaAAnJnP8-JEL8zAmafopJ1z77ri7Zu3XObvqbZ-R9I13vJ1GRiKjz4pTGGUJrg2cOCO0lGMedaTGZmFrl16DonV6gSfeAQqOCeOf8pTp7nXJUQw0BrxQl0vfkIhiVgow"/>
+<!-- Top Overlay Info -->
+<div class="absolute top-4 left-4 z-10">
+<div class="flex items-center gap-2 bg-black/40 backdrop-blur-md text-white px-3 py-1.5 rounded-lg border border-white/10">
+<span class="size-2 rounded-full bg-green-500 animate-pulse"></span>
+<span class="text-xs font-semibold uppercase tracking-wider">Elena Rodriguez (Patient)</span>
+</div>
+</div>
+<!-- Picture-in-Picture (Provider) -->
+<div class="absolute bottom-6 right-6 w-48 aspect-[3/4] md:w-64 rounded-xl overflow-hidden border-2 border-white/20 shadow-2xl z-20 bg-slate-800">
+<img class="h-full w-full object-cover" data-alt="Doctor video feed showing professional in a white coat" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4J3ElGY9qYWr9FAoeCuX1rH_o3VTXxrZ2TuGOW8ytfbs-LoYOxuaThkQKmsWb8AsuZdcrizxiUd2tzLqCWyAUaA1pXrBsinmEVmgem3aJAUh0uehAsUyHV1Nsl7vQmvrYT7FAj7x32XRSFzLrE64zE2HIafeoc2bO7vT6KmPPL8l60FFo7OEnMmbZaayEQtdKbetq1J3JYJDAN3MCoPNjNDotEpbvNYCflDhOiSrsWyZYusX_KBrZtBrohONWd2NvURxy0jtNYlU"/>
+<div class="absolute bottom-2 left-2 bg-black/40 backdrop-blur-sm text-white px-2 py-0.5 rounded text-[10px] font-bold">YOU</div>
+</div>
+<!-- Call Controls Floating Bar -->
+<div class="absolute bottom-6 left-1/2 -translate-x-1/2 flex items-center gap-4 bg-slate-900/80 backdrop-blur-xl px-6 py-4 rounded-3xl border border-white/10 z-30">
+<button class="size-12 flex items-center justify-center rounded-full bg-slate-700 text-white hover:bg-slate-600 transition-colors">
+<span class="material-symbols-outlined">mic</span>
+</button>
+<button class="size-12 flex items-center justify-center rounded-full bg-slate-700 text-white hover:bg-slate-600 transition-colors">
+<span class="material-symbols-outlined">videocam</span>
+</button>
+<button class="size-12 flex items-center justify-center rounded-full bg-slate-700 text-white hover:bg-slate-600 transition-colors">
+<span class="material-symbols-outlined">present_to_all</span>
+</button>
+<button class="size-12 flex items-center justify-center rounded-full bg-slate-700 text-white hover:bg-slate-600 transition-colors">
+<span class="material-symbols-outlined">more_horiz</span>
+</button>
+<div class="h-8 w-px bg-slate-700 mx-2"></div>
+<button class="h-12 px-6 flex items-center justify-center rounded-full bg-red-600 text-white hover:bg-red-700 transition-colors font-bold gap-2">
+<span class="material-symbols-outlined fill-1">call_end</span>
+<span class="hidden sm:inline">End Session</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Right Sidebar: Interaction Tabs -->
+<aside class="hidden xl:flex w-80 flex-col border-l border-slate-200 dark:border-slate-800 bg-white dark:bg-background-dark">
+<div class="flex border-b border-slate-200 dark:border-slate-800 shrink-0">
+<button class="flex-1 py-4 text-sm font-bold border-b-2 border-primary text-primary">Chat</button>
+<button class="flex-1 py-4 text-sm font-bold border-b-2 border-transparent text-slate-500 hover:text-slate-800 dark:hover:text-slate-200">Info</button>
+<button class="flex-1 py-4 text-sm font-bold border-b-2 border-transparent text-slate-500 hover:text-slate-800 dark:hover:text-slate-200">Notes</button>
+</div>
+<!-- Chat View -->
+<div class="flex-1 flex flex-col overflow-hidden">
+<div class="flex-1 overflow-y-auto p-4 space-y-4">
+<div class="flex flex-col gap-1 items-start">
+<div class="bg-slate-100 dark:bg-slate-800 p-3 rounded-2xl rounded-tl-none text-sm max-w-[85%]">
+                                Hello Dr. Jenkins, I've been feeling a bit of chest tightness since this morning.
+                            </div>
+<span class="text-[10px] text-slate-400 ml-1">10:02 AM</span>
+</div>
+<div class="flex flex-col gap-1 items-end">
+<div class="bg-primary/10 border border-primary/20 text-slate-800 dark:text-slate-100 p-3 rounded-2xl rounded-tr-none text-sm max-w-[85%]">
+                                I understand. Have you experienced any dizziness or nausea alongside the tightness?
+                            </div>
+<span class="text-[10px] text-slate-400 mr-1">10:05 AM</span>
+</div>
+</div>
+<!-- Quick Note Entry (Always visible for doctor) -->
+<div class="p-4 border-t border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/30">
+<p class="text-[10px] font-bold uppercase text-primary mb-2 tracking-widest">Live Consultation Notes</p>
+<textarea class="w-full bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-xl text-sm p-3 focus:ring-primary focus:border-primary resize-none" placeholder="Type clinical notes here..." rows="4"></textarea>
+</div>
+<div class="p-4 border-t border-slate-200 dark:border-slate-800">
+<div class="flex items-center gap-2 bg-slate-100 dark:bg-slate-800 rounded-xl px-3 py-1">
+<input class="flex-1 bg-transparent border-none text-sm focus:ring-0 py-2" placeholder="Type a message..." type="text"/>
+<button class="text-primary p-1 hover:bg-primary/10 rounded-lg">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</div>
+</div>
+</aside>
+</main>
+</div>
+</body></html>

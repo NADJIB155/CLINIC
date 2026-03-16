@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Device Management | HealthSync</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec5b13",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221610",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Public Sans', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="flex flex-col min-h-screen">
+<!-- Top Navigation -->
+<header class="border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-background-dark sticky top-0 z-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between h-16 items-center">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 bg-primary rounded flex items-center justify-center text-white">
+<span class="material-symbols-outlined">health_and_safety</span>
+</div>
+<h2 class="text-xl font-bold tracking-tight text-slate-900 dark:text-white">HealthSync</h2>
+</div>
+<nav class="hidden md:flex space-x-8">
+<a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium" href="#">Dashboard</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium" href="#">Health Records</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium" href="#">Appointments</a>
+<a class="text-primary border-b-2 border-primary pb-5 -mb-5 text-sm font-medium" href="#">Security</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="p-2 text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="p-2 text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg">
+<span class="material-symbols-outlined">settings</span>
+</button>
+<div class="h-8 w-8 rounded-full bg-primary/20 flex items-center justify-center overflow-hidden border border-primary/30">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="User profile avatar photo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtGmR8SBxdEW8GQo6-JmSavF8z4uce9vT3RDqs9fr8z-LqKWzcJqtus4_ji1K9KCnqcJm6e_taIdLaHHOFsBGdFcxxY5UcIkZVDDcFW_Ly02zyK1HObWMpwjiC0h1J7gLBaM2LdpNm2pIXK8WYT22nulNMoh5dsuIKQf9MW6OYVfgFxYpVnIFOB_eYFHAxDzN_zLZB-2h8fKuex7ck9aFeOfFJzmzuXEmaKN398mGZIuQeY0sa4S1R0WAr1GfKoJYZk0hsuNZcibw"/>
+</div>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full">
+<div class="flex flex-col lg:flex-row gap-8">
+<!-- Sidebar Nav -->
+<aside class="w-full lg:w-64 flex-shrink-0">
+<div class="flex flex-col gap-1">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-medium">Profile Settings</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined">lock</span>
+<span class="font-medium">Password &amp; 2FA</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 bg-primary/10 text-primary rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined">devices</span>
+<span class="font-medium">Active Sessions</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined">history</span>
+<span class="font-medium">Login History</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined">visibility</span>
+<span class="font-medium">Privacy Settings</span>
+</a>
+</div>
+</aside>
+<!-- Content Area -->
+<div class="flex-grow space-y-8">
+<!-- Page Header -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+<div>
+<h1 class="text-2xl font-bold text-slate-900 dark:text-white">Security: Active Sessions</h1>
+<p class="text-slate-500 dark:text-slate-400 mt-1">Manage and sign out of your active sessions on other devices to keep your medical data secure.</p>
+</div>
+<button class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-slate-900 dark:bg-slate-100 text-white dark:text-slate-900 font-semibold rounded-lg hover:bg-slate-800 dark:hover:bg-white transition-colors text-sm">
+<span class="material-symbols-outlined text-[20px]">logout</span>
+                            Log Out All Other Sessions
+                        </button>
+</div>
+<!-- Current Session -->
+<section class="space-y-4">
+<h2 class="text-lg font-semibold flex items-center gap-2">
+                            Current Session
+                            <span class="inline-block w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+</h2>
+<div class="bg-white dark:bg-slate-900 border border-primary/30 rounded-xl p-5 flex items-start sm:items-center justify-between gap-4 shadow-sm">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">laptop_mac</span>
+</div>
+<div>
+<h3 class="font-bold text-slate-900 dark:text-white">MacBook Pro 14" (This Device)</h3>
+<div class="flex flex-wrap gap-x-4 gap-y-1 mt-1 text-sm text-slate-500 dark:text-slate-400">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">browser_updated</span> Chrome · macOS</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">location_on</span> New York, USA (192.168.1.1)</span>
+</div>
+</div>
+</div>
+<span class="hidden sm:inline-block px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 text-xs font-bold rounded-full">ACTIVE NOW</span>
+</div>
+</section>
+<!-- Other Sessions -->
+<section class="space-y-4">
+<h2 class="text-lg font-semibold">Other Active Sessions</h2>
+<div class="grid gap-4">
+<!-- Device Card 1 -->
+<div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4 hover:border-slate-300 dark:hover:border-slate-700 transition-all shadow-sm">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined text-3xl">smartphone</span>
+</div>
+<div>
+<h3 class="font-bold text-slate-900 dark:text-white">iPhone 15 Pro</h3>
+<div class="flex flex-wrap gap-x-4 gap-y-1 mt-1 text-sm text-slate-500 dark:text-slate-400">
+<span class="flex items-center gap-1">HealthSync App · iOS 17.4</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">location_on</span> Los Angeles, USA</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">schedule</span> Last active: 2 hours ago</span>
+</div>
+</div>
+</div>
+<button class="px-4 py-2 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 font-medium rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors text-sm">
+                                    Remove Device
+                                </button>
+</div>
+<!-- Device Card 2 -->
+<div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4 hover:border-slate-300 dark:hover:border-slate-700 transition-all shadow-sm">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined text-3xl">tablet_mac</span>
+</div>
+<div>
+<h3 class="font-bold text-slate-900 dark:text-white">iPad Air</h3>
+<div class="flex flex-wrap gap-x-4 gap-y-1 mt-1 text-sm text-slate-500 dark:text-slate-400">
+<span class="flex items-center gap-1">Safari · iPadOS</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">location_on</span> New York, USA</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">schedule</span> Last active: 3 days ago</span>
+</div>
+</div>
+</div>
+<button class="px-4 py-2 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 font-medium rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors text-sm">
+                                    Remove Device
+                                </button>
+</div>
+</div>
+</section>
+<!-- Trusted Devices Section -->
+<section class="space-y-4">
+<div class="flex items-center justify-between">
+<h2 class="text-lg font-semibold">Trusted Devices</h2>
+<button class="text-primary text-sm font-semibold hover:underline flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]">add</span>
+                                Add Trusted Device
+                            </button>
+</div>
+<div class="bg-slate-100 dark:bg-slate-800/50 rounded-xl p-6 border border-dashed border-slate-300 dark:border-slate-700 text-center">
+<div class="w-12 h-12 bg-white dark:bg-slate-800 rounded-full flex items-center justify-center mx-auto mb-3 shadow-sm">
+<span class="material-symbols-outlined text-slate-400">verified_user</span>
+</div>
+<h4 class="font-semibold text-slate-900 dark:text-white">Enhanced Security Enabled</h4>
+<p class="text-sm text-slate-500 dark:text-slate-400 max-w-sm mx-auto mt-1">
+                                Trusted devices don't require two-factor authentication codes when you log in.
+                            </p>
+<div class="mt-4 flex flex-wrap justify-center gap-2">
+<div class="flex items-center gap-2 px-3 py-1.5 bg-white dark:bg-slate-800 rounded-full text-xs font-medium border border-slate-200 dark:border-slate-700">
+<span class="material-symbols-outlined text-[14px] text-primary">check_circle</span>
+                                    Home Office iMac
+                                    <button class="material-symbols-outlined text-[14px] ml-1 text-slate-400 hover:text-red-500">close</button>
+</div>
+<div class="flex items-center gap-2 px-3 py-1.5 bg-white dark:bg-slate-800 rounded-full text-xs font-medium border border-slate-200 dark:border-slate-700">
+<span class="material-symbols-outlined text-[14px] text-primary">check_circle</span>
+                                    Work Laptop
+                                    <button class="material-symbols-outlined text-[14px] ml-1 text-slate-400 hover:text-red-500">close</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Security Alert -->
+<div class="bg-primary/5 border border-primary/20 rounded-xl p-4 flex gap-4 items-start">
+<span class="material-symbols-outlined text-primary">info</span>
+<div>
+<h4 class="text-sm font-bold text-slate-900 dark:text-white">Session Security Tip</h4>
+<p class="text-sm text-slate-600 dark:text-slate-400 mt-1">
+                                Always log out of public computers and use 'Remove Device' for any hardware you no longer own or recognize. For maximum security, we recommend changing your password every 90 days.
+                            </p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 py-8">
+<div class="max-w-7xl mx-auto px-4 text-center">
+<p class="text-sm text-slate-500 dark:text-slate-400">© 2024 HealthSync Medical Systems. All sessions are encrypted and monitored for suspicious activity.</p>
+<div class="mt-4 flex justify-center space-x-6 text-xs font-medium text-slate-400">
+<a class="hover:text-primary" href="#">Privacy Policy</a>
+<a class="hover:text-primary" href="#">Security Terms</a>
+<a class="hover:text-primary" href="#">Support</a>
+</div>
+</div>
+</footer>
+</div>
+</body></html>

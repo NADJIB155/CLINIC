@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec5b13",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221610",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Public Sans', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #e2e8f0;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display">
+<div class="flex h-screen overflow-hidden">
+<!-- Sidebar Navigation -->
+<aside class="w-64 flex-shrink-0 flex flex-col bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800">
+<div class="p-6 flex items-center gap-3">
+<div class="bg-primary rounded-lg p-2 flex items-center justify-center">
+<span class="material-symbols-outlined text-white">health_and_safety</span>
+</div>
+<div>
+<h1 class="text-primary text-lg font-bold leading-none">HealthSync</h1>
+<p class="text-slate-500 dark:text-slate-400 text-xs font-medium">Medical Portal</p>
+</div>
+</div>
+<nav class="flex-1 px-4 space-y-2 mt-4">
+<a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-xl transition-colors" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-sm font-semibold">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-xl transition-colors" href="#">
+<span class="material-symbols-outlined">calendar_month</span>
+<span class="text-sm font-semibold">Appointments</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-xl transition-colors" href="#">
+<span class="material-symbols-outlined">description</span>
+<span class="text-sm font-semibold">Health Records</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 bg-primary/10 text-primary rounded-xl transition-colors" href="#">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">chat</span>
+<span class="text-sm font-bold">Messages</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-xl transition-colors" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-sm font-semibold">Settings</span>
+</a>
+</nav>
+<div class="p-4 border-t border-slate-200 dark:border-slate-800">
+<div class="flex items-center gap-3 p-2 bg-slate-50 dark:bg-slate-800/50 rounded-xl">
+<div class="size-10 rounded-full bg-cover bg-center" data-alt="Doctor profile photo portrait" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAEy2p9iiNfn2lUFSxZfVU8pUXrwAYNfSKwtvnsKhZVPzQvKemfyQjMr8SAIGagamGvT3TrMRdAaeYXOEBQ4O51NUtWqBi-DVhlfSn0i9ufCowST6DEII8s3dHb8bx48gA9ZpHqwPz6H3HOex4G0NykmdQg4ukp_E9P3kjw5-5k52amyLm7GPA5PrOqkGx1D06HgJogpJZY62ksJafnYVK5xrGktVh5s5dMmGVWVhf3UsQk1rwFrvIeUIq3Q-UnTfazQqG4mWQPt-Y')"></div>
+<div class="flex-1 min-w-0">
+<p class="text-sm font-bold truncate">Dr. Julian Vance</p>
+<p class="text-xs text-slate-500 truncate">Cardiologist</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content Area: Messaging Center -->
+<main class="flex-1 flex overflow-hidden">
+<!-- Message List / Inbox -->
+<section class="w-80 lg:w-96 flex flex-col bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800">
+<div class="p-6">
+<div class="flex items-center justify-between mb-6">
+<h2 class="text-xl font-bold">Messages</h2>
+<button class="text-primary hover:bg-primary/10 p-2 rounded-full transition-colors">
+<span class="material-symbols-outlined leading-none">edit_square</span>
+</button>
+</div>
+<div class="relative mb-4">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-sm">search</span>
+<input class="w-full bg-slate-100 dark:bg-slate-800 border-none rounded-xl py-2 pl-10 pr-4 text-sm focus:ring-2 focus:ring-primary/50 transition-shadow" placeholder="Search patients..." type="text"/>
+</div>
+<div class="flex gap-4 border-b border-slate-100 dark:border-slate-800">
+<button class="pb-3 border-b-2 border-primary text-sm font-bold text-primary">All</button>
+<button class="pb-3 border-b-2 border-transparent text-sm font-medium text-slate-500 hover:text-slate-700 dark:hover:text-slate-300">Unread</button>
+<button class="pb-3 border-b-2 border-transparent text-sm font-medium text-slate-500 hover:text-slate-700 dark:hover:text-slate-300">Archived</button>
+</div>
+</div>
+<div class="flex-1 overflow-y-auto custom-scrollbar">
+<!-- Inbox Item Active -->
+<div class="flex gap-4 p-4 bg-primary/5 border-l-4 border-primary cursor-pointer hover:bg-primary/10 transition-colors">
+<div class="relative flex-shrink-0">
+<div class="size-12 rounded-full bg-cover bg-center border-2 border-white dark:border-slate-900" data-alt="Patient profile photo Sarah Jenkins" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCDOJSIcFvj6_JQ2epD3p9ru3lMtC6oILQw5kxZHKib3kygAhLhs0UbGYyuZQf_SLJyQJgCpc0ec-L197A8G2dNs0zRxSQyp-BobO6HhJRdhjPEOBwoNPGu6KoPCKIH8u24S7htba7S9JFAkMq9DbzV01Yv7Rkia8Vrh8dk404dY4dcl-jGHcS_XHJrog4u_8veY2OK2z-k6325h67btpva2_WSXEqZD3BYoP5_SiQIsc9zvlm4W5GcK2N_RGRwEDfX3QZYDOp2tXk')"></div>
+<div class="absolute bottom-0 right-0 size-3 bg-green-500 border-2 border-white dark:border-slate-900 rounded-full"></div>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-start mb-1">
+<h3 class="text-sm font-bold truncate">Sarah Jenkins</h3>
+<span class="text-[10px] text-slate-500 font-medium">10:45 AM</span>
+</div>
+<p class="text-xs text-slate-600 dark:text-slate-300 line-clamp-2 leading-relaxed">Thanks for the update on my lab results. Should I schedule a follow-up visit for next week?</p>
+</div>
+</div>
+<!-- Inbox Item -->
+<div class="flex gap-4 p-4 cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors border-b border-slate-100 dark:border-slate-800/50">
+<div class="flex-shrink-0">
+<div class="size-12 rounded-full bg-cover bg-center" data-alt="Patient profile photo Marcus Thorne" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB-6bphOlpz-LWfXawuNg3ovFZbYpLnFkbGq-mPUCHzlJyKpHCvQI1oFNsPBRisbVqAwvDjHbK4WbzXSDBqBSodErqc6c9mr6Q3mc6IrYjX65HuO4_DnU3VRoDitTHtI03biP7HA732ktxYb5HrXFIWExsw6xjmp7cyYR5feBVg4bqneALnYZxC6xTv-QS7pNpxRPDcx4CuUqMIWBtM0ZnRpNmVax0Bc01mGTAYhuxGjW3l_nFE5-TJsVS_v2ocvRMmhSmV5ZNpLNo')"></div>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-start mb-1">
+<h3 class="text-sm font-bold truncate">Marcus Thorne</h3>
+<span class="text-[10px] text-slate-500 font-medium">Yesterday</span>
+</div>
+<p class="text-xs text-slate-500 dark:text-slate-400 line-clamp-1">I've uploaded the new insurance forms as requested.</p>
+</div>
+</div>
+<!-- Inbox Item -->
+<div class="flex gap-4 p-4 cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors border-b border-slate-100 dark:border-slate-800/50">
+<div class="relative flex-shrink-0">
+<div class="size-12 rounded-full bg-cover bg-center" data-alt="Patient profile photo Elena Rodriguez" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDtSsT-u0TGKeJ17_0XY3oAQ1rhG8hfGNJng0fyN9ncQn3U2jyd5s7ubLrS5EWzhqyKPtZEAvnddjo8Z84WSXfreHvKiDlT-qaJsta_Vjha9AxIK3zR9LMLtrdcqAEGYOMrf3u83xoObuQ-tjtnZh7rFKqAdf0P-iL25j7avsgYVXeoB5ECpXIC9ak6FOnckU9K8n1dX2wFz3hsqC-WZZXiMZHjpG29WXkRtNVhahbs9fQOXKVKi33TBreOl45LpHPorUZNZYnC7r8')"></div>
+<div class="absolute top-0 right-0 size-2 bg-primary rounded-full"></div>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-start mb-1">
+<h3 class="text-sm font-bold truncate">Elena Rodriguez</h3>
+<span class="text-[10px] text-primary font-bold">2:15 PM</span>
+</div>
+<p class="text-xs font-bold text-slate-800 dark:text-slate-200 line-clamp-1">Is the medication dosage correct?</p>
+</div>
+</div>
+<!-- Inbox Item -->
+<div class="flex gap-4 p-4 cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors border-b border-slate-100 dark:border-slate-800/50">
+<div class="flex-shrink-0">
+<div class="size-12 rounded-full bg-cover bg-center" data-alt="Patient profile photo Robert Wilson" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAp4o3mKuHw3FT5CZGN9cxJT84ziDyTLGw0kPmNI5KKlY3jfbjGhWmfkMNULcGtJJNQkNAq3q_nsf8xDv50mW3k0WsgLlTCGGjRfGYu7erNqGSM2HY_h8qgvYRTgjt72vQcEn6IaLL4eg1IwHbXWkPC57GubspDrQgUQkEVMqpqhJqp5U1WM3kj0FfmqVYZOMkF9_Bs-oOzVuuXaOygQKR8Fe6L6SDQd6Ee6iurmibJlQUMKu3j5JsR6Udl7c7NNHXI5pQyTkqKH1o')"></div>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-start mb-1">
+<h3 class="text-sm font-bold truncate">Robert Wilson</h3>
+<span class="text-[10px] text-slate-500 font-medium">Mon</span>
+</div>
+<p class="text-xs text-slate-500 dark:text-slate-400 line-clamp-1">The knee pain has subsided significantly since our session.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Active Conversation Area -->
+<section class="flex-1 flex flex-col bg-background-light dark:bg-background-dark">
+<!-- Chat Header -->
+<div class="h-20 flex items-center justify-between px-8 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800">
+<div class="flex items-center gap-4">
+<div class="size-10 rounded-full bg-cover bg-center" data-alt="Patient Sarah Jenkins profile" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAzJ2qjvC3jkJOUTLBzSAL4eV4XzGfJk4NT6mPSK59DjA3HdOlTDHfCVKJ1M6rJmG9UXwcLLiZV0F28mGzNxIajloHpfPl1SPwGJrkXrHeQMPtTpgnpecTIcDUctVQtU8NU5LHzGy0Fd8ZVV20sbnANyvAdqdSOZF2tkLMzN1Xs96VMfDXHvqVLCE6HmDEBQTfAsQ4WREVlGxVRiaGxY_EgATeOuWLFgYmt29s45mRu1x06rIQc1tBUrhFxuFYNnuygkrEP0W8QpQ0')"></div>
+<div>
+<h2 class="text-base font-bold">Sarah Jenkins</h2>
+<div class="flex items-center gap-1.5">
+<span class="size-2 bg-green-500 rounded-full"></span>
+<span class="text-xs text-slate-500 font-medium">Active now</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2 text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-colors">
+<span class="material-symbols-outlined">call</span>
+</button>
+<button class="p-2 text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-colors">
+<span class="material-symbols-outlined">videocam</span>
+</button>
+<button class="p-2 text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-colors">
+<span class="material-symbols-outlined">info</span>
+</button>
+</div>
+</div>
+<!-- Chat Bubbles Area -->
+<div class="flex-1 overflow-y-auto p-8 space-y-6 custom-scrollbar">
+<div class="flex justify-center">
+<span class="text-[11px] font-bold text-slate-400 bg-slate-200/50 dark:bg-slate-800/50 px-3 py-1 rounded-full uppercase tracking-wider">Today</span>
+</div>
+<!-- Incoming Message -->
+<div class="flex items-end gap-3 max-w-[80%]">
+<div class="size-8 rounded-full bg-cover bg-center flex-shrink-0" data-alt="Sarah Jenkins profile small" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA2TLqXSw5ZXaEI4tjPPKdH6fcrO7v7uDiNHgSYSJTk0zGtLA3EJ_nQk78x9kiPg6xqaTdJZV5RLh6qlXg_nUHgdEevKUokbPIO3C0CUz4na0__nxnd9VBvFO0-ML6u1r3gfFNRHDQRcvF7N-w17HGlysN00zk5grqbc8cSscRxdOtqC5kp7djiMtR7q9s_TnPyDT9Va3k0k_zCJ4byl9eXjqk2hmu7r2YWi1jTSyB7F3HbK8whV03y4e9oGTfX6PJ3RcY8IddiONM')"></div>
+<div class="bg-white dark:bg-slate-800 p-4 rounded-2xl rounded-bl-none shadow-sm">
+<p class="text-sm leading-relaxed">Hello Dr. Vance, I just received my blood test results through the portal. Everything seems to be in the normal range except for the LDL cholesterol.</p>
+<span class="text-[10px] text-slate-400 mt-2 block">10:42 AM</span>
+</div>
+</div>
+<!-- Outgoing Message -->
+<div class="flex items-end gap-3 max-w-[80%] ml-auto flex-row-reverse">
+<div class="size-8 rounded-full bg-cover bg-center flex-shrink-0" data-alt="Dr Vance profile small" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAZKNRAiS7tK1jx3ED4NOt7nKJF79pmAQmwHrgds2gBwa6uMFOdMzSFnuyT8b5BlAjvuQlzoip9sNG6e1MWAXbeU0LIuuFSPfxw5u-aCJScW5o2G8Tzy8tH0Mer67zETs5Kk91dK_0GuNIx1bwBVPo1OIHq95SRnUiKapUd4l3joygBRXq_EF4f-Kg-zEnC8dcHd-rJKheDIbUHFVLKHNwA4reDpu5PN54qxJ8XqeBj2p11Vifxf0rzJOBrZro0_1syxyZfWibSAvQ')"></div>
+<div class="bg-primary p-4 rounded-2xl rounded-br-none shadow-sm text-white">
+<p class="text-sm leading-relaxed">Hello Sarah. Yes, I saw those results. Your LDL is slightly elevated, but given your progress with exercise, it's not a major concern yet. I've sent a summary to your health records.</p>
+<span class="text-[10px] text-white/70 mt-2 block text-right">10:44 AM</span>
+</div>
+</div>
+<!-- Shared Record (Outgoing) -->
+<div class="flex items-end gap-3 max-w-[80%] ml-auto flex-row-reverse">
+<div class="size-8 rounded-full bg-cover bg-center flex-shrink-0" data-alt="Dr Vance profile small" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBXltsyZDEBQ-nI-AbvskS5Z7ar1LHBx8eQ8J8m9c8aqj0t1kPxoVqtrWnOssN0lZqaYR3b0s88mGAUicS56ZqmCWi1vMtdxNgakqv6PmU9aF-PsiwMv5ukO4NfG2g8xRSHQKR4vHLSk7JTyzth-2CPJeQK9QJW5tcUaYy0hzSRuceaCUOEr6ehPrefLUGd9xLDnKJ45Hb5u0AAgo0Eoedov5lhTLKHJ-B4bwdl9L100sxfkiOHNzqcxT_1LBtnwG2C27TPP7zzqpU')"></div>
+<div class="bg-primary p-3 rounded-2xl rounded-br-none shadow-sm text-white">
+<div class="flex items-center gap-3 bg-white/10 p-3 rounded-xl border border-white/20">
+<span class="material-symbols-outlined text-3xl">description</span>
+<div class="flex-1">
+<p class="text-sm font-bold">Lab_Report_Summary.pdf</p>
+<p class="text-[10px] opacity-80">1.2 MB • Medical Record</p>
+</div>
+<span class="material-symbols-outlined cursor-pointer hover:bg-white/20 rounded-full p-1">download</span>
+</div>
+<span class="text-[10px] text-white/70 mt-2 block text-right">10:44 AM</span>
+</div>
+</div>
+<!-- Incoming Message -->
+<div class="flex items-end gap-3 max-w-[80%]">
+<div class="size-8 rounded-full bg-cover bg-center flex-shrink-0" data-alt="Sarah Jenkins profile small" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBF6La2LQFWwxZ6Sel_HNHDLWOyEv1qM-RiJ96iwsec_vG-4RAfpEWlnZize_MwSKtWLpgbfaSHaA2GwS0_tkAmbdfYEhZDaslCwdDl3FptX-VJb8sp3HOBPwbEbh93fdJf1OTNJs7yJJCbTtF7lJyrzx1FXtztJwB2smVMglldebdZ1xnax73egN-LKXrU4KVrtN0RzKAMgHv-zsnqFWYSEW6kDA_WJuCtLQno7ZCrm2vTdH47BZn3vMMhlzrHlcIHDyC1aJKvVfY')"></div>
+<div class="bg-white dark:bg-slate-800 p-4 rounded-2xl rounded-bl-none shadow-sm">
+<p class="text-sm leading-relaxed">Thanks for the update on my lab results. Should I schedule a follow-up visit for next week to discuss this further?</p>
+<span class="text-[10px] text-slate-400 mt-2 block">10:45 AM</span>
+</div>
+</div>
+</div>
+<!-- Message Input Area -->
+<div class="p-6 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800">
+<div class="flex items-center gap-4 bg-slate-100 dark:bg-slate-800 p-2 rounded-2xl">
+<div class="flex items-center gap-1">
+<button class="p-2 text-slate-500 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">attach_file</span>
+</button>
+<button class="p-2 text-slate-500 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">image</span>
+</button>
+<button class="p-2 text-slate-500 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">clinical_notes</span>
+</button>
+</div>
+<input class="flex-1 bg-transparent border-none focus:ring-0 text-sm py-2" placeholder="Type a message to Sarah..." type="text"/>
+<div class="flex items-center gap-2 pr-2">
+<button class="p-2 text-slate-500 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">sentiment_satisfied</span>
+</button>
+<button class="size-10 bg-primary text-white rounded-xl flex items-center justify-center shadow-lg shadow-primary/20 hover:bg-primary/90 transition-all">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</div>
+<p class="text-[10px] text-center text-slate-400 mt-4">
+<span class="material-symbols-outlined text-[12px] align-middle mr-1">lock</span>
+                        All communications are encrypted and HIPAA compliant.
+                    </p>
+</div>
+</section>
+</main>
+</div>
+</body></html>

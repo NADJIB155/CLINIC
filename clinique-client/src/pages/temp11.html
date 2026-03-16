@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Recovering from Cardiac Surgery | HealthSync Library</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec5b13",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221610",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Public Sans', sans-serif; }
+        .prose h2 { @apply text-2xl font-bold text-slate-900 dark:text-slate-100 mt-8 mb-4; }
+        .prose p { @apply text-base text-slate-700 dark:text-slate-300 leading-relaxed mb-4; }
+        .prose ul { @apply list-disc pl-5 mb-4 text-slate-700 dark:text-slate-300; }
+        .prose li { @apply mb-2; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-slate-800 px-6 lg:px-20 py-4 bg-white dark:bg-slate-900">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-4 text-primary">
+<div class="size-8 flex items-center justify-center">
+<span class="material-symbols-outlined text-3xl">medical_services</span>
+</div>
+<h2 class="text-slate-900 dark:text-white text-xl font-black leading-tight tracking-tight">HealthSync</h2>
+</div>
+<nav class="hidden md:flex items-center gap-9">
+<a class="text-slate-600 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="#">Library</a>
+<a class="text-slate-600 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="#">My Health</a>
+<a class="text-slate-600 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="#">Doctors</a>
+</nav>
+</div>
+<div class="flex flex-1 justify-end gap-4 items-center">
+<label class="hidden sm:flex flex-col min-w-40 h-10 max-w-64">
+<div class="flex w-full flex-1 items-stretch rounded-xl h-full border border-slate-200 dark:border-slate-700">
+<div class="text-slate-400 flex items-center justify-center pl-4 rounded-l-xl bg-slate-50 dark:bg-slate-800">
+<span class="material-symbols-outlined text-xl">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 rounded-xl text-slate-900 dark:text-white focus:outline-0 focus:ring-1 focus:ring-primary border-none bg-slate-50 dark:bg-slate-800 h-full placeholder:text-slate-400 px-4 rounded-l-none pl-2 text-sm font-normal" placeholder="Search resources..." value=""/>
+</div>
+</label>
+<div class="flex gap-2">
+<button class="flex items-center justify-center rounded-xl h-10 w-10 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-primary/10 hover:text-primary transition-all">
+<span class="material-symbols-outlined">bookmark</span>
+</button>
+<button class="flex items-center justify-center rounded-xl h-10 w-10 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-primary/10 hover:text-primary transition-all">
+<span class="material-symbols-outlined">share</span>
+</button>
+</div>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-primary/20" data-alt="User profile picture of a medical professional" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA9fdVdTdY3Ztdhs9RfoI0nFGDR2iBM2mfyggmMwSUoK34PHKoAhNn8TZvXnVavV-rxijkV4D2a3HftucV6eqSd-z21zicGDm_UqsgSia6THSozD7XKaSTGVWgnatbsmKaj8kaLO2Bc_EY3-1aUWsFrrEmbDKZjsFqKN3czxU8VKxdy31bQMwYLuSs_o0rx59HAwtBkV0qD2XkYI6mrvKRi4D2sCgUaAVUhLGsawVJTVN6s1kl2wQ3nK4iPBG38cKpuxuwbjD-6AXg");'></div>
+</div>
+</header>
+<main class="flex-1 max-w-7xl mx-auto w-full px-6 lg:px-20 py-8">
+<div class="flex flex-wrap gap-2 mb-6">
+<a class="text-primary text-sm font-medium hover:underline" href="#">Home</a>
+<span class="text-slate-400 text-sm font-medium">/</span>
+<a class="text-primary text-sm font-medium hover:underline" href="#">Library</a>
+<span class="text-slate-400 text-sm font-medium">/</span>
+<span class="text-slate-500 dark:text-slate-400 text-sm font-medium">Cardiac Care</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+<div class="lg:col-span-8">
+<header class="mb-8">
+<h1 class="text-slate-900 dark:text-white text-4xl lg:text-5xl font-black leading-tight tracking-tight mb-4">
+                                Recovering from Cardiac Surgery: A Comprehensive Guide
+                            </h1>
+<div class="flex items-center gap-4 mb-4">
+<div class="size-12 rounded-full bg-slate-200 dark:bg-slate-700 bg-cover bg-center" data-alt="Portrait of Dr. Elena Rodriguez" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAfPNmmWWAiyEmwbeTdyohkD5Z5E3Vs5_j6v15O5DEroX7DMCnmd4KcfVR49q2llbQPRvoUoijMzHcpd0zJxeLp7RyC55-odc6vFxw4NBccKWxsyqH74M-brSmZM4vvhkJPjl3b1ZcWdztPM25ELnuHebPXVqyYxlIlVSikJ5eMyGzI4bERH5068tl_uZOZ7WyiRKutWFMAlfNTsWcKmB7mDywO0wWdTBV--RYJtt2L8HNmuYYC5qQ7bpSZYB907kQbq3n8UCScjss");'></div>
+<div>
+<p class="text-slate-900 dark:text-slate-100 font-bold">Dr. Elena Rodriguez</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Published Oct 12, 2023 • 12 min read</p>
+</div>
+</div>
+<div class="flex items-center gap-2 text-slate-500 dark:text-slate-400 text-sm border-t border-slate-100 dark:border-slate-800 pt-4">
+<span class="material-symbols-outlined text-sm">verified_user</span>
+<p>Reviewed by the HealthSync Medical Board for clinical accuracy</p>
+</div>
+</header>
+<div class="rounded-2xl overflow-hidden mb-10 shadow-xl shadow-primary/5">
+<div class="w-full bg-center bg-no-repeat bg-cover min-h-[400px]" data-alt="A doctor explaining a heart model to a patient" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBrexR_q6SJo0yS3vmkM7I_WOigF7QIFxYAx5y0awjAKya3B4Hf22bq94vS122Tj1zpReZ61OL2-tK12cj7nx8gdOGHysXjmvPsnS9i6xlaIXl63hTdqt7EzCVCxQwZXLsvmACO7WgDcKn19pxxK1mA_JpulWZz_dXgN1DTGM2hF396jDvaWeCrGoyIYwrq6n9qZVKsEIjDisp5meQrfrz4enX0LjHE_fKvY-C6KFFvRJVjZKDTX4_Ji7MNkQ6rfbmChUryk3Aig9Y");'></div>
+</div>
+<article class="prose max-w-none">
+<p class="text-xl leading-relaxed text-slate-600 dark:text-slate-300 font-medium italic border-l-4 border-primary pl-6 mb-8">
+                                "The recovery period after cardiac surgery is just as critical as the procedure itself. Understanding your body's signals and following a structured rehabilitation plan is key to long-term heart health."
+                            </p>
+<h2>Initial Recovery: The First 48 Hours</h2>
+<p>Immediately following cardiac surgery, patients are typically monitored in the Cardiovascular Intensive Care Unit (CVICU). During this time, the primary focus is on stabilizing vital signs and ensuring the new heart pathways are functioning correctly. You may feel drowsy and experience some chest discomfort.</p>
+<h2>Managing Incision Care</h2>
+<p>Keeping your incision clean and dry is vital to preventing infection. Follow these daily guidelines:</p>
+<ul>
+<li>Wash your hands thoroughly before touching the area.</li>
+<li>Gently pat the area dry after showering; do not rub.</li>
+<li>Avoid using lotions, powders, or ointments unless prescribed.</li>
+<li>Monitor for redness, swelling, or unusual drainage.</li>
+</ul>
+<div class="my-10 p-8 rounded-2xl bg-primary/5 border border-primary/10">
+<h3 class="text-xl font-bold text-primary mb-3 flex items-center gap-2">
+<span class="material-symbols-outlined">warning</span> Warning Signs to Watch For
+                                </h3>
+<p class="text-slate-700 dark:text-slate-300 mb-4">Contact your surgical team immediately if you experience:</p>
+<ul class="grid md:grid-cols-2 gap-2">
+<li class="flex items-center gap-2"><span class="size-1.5 rounded-full bg-primary"></span> Fever over 101°F (38.3°C)</li>
+<li class="flex items-center gap-2"><span class="size-1.5 rounded-full bg-primary"></span> Shortness of breath at rest</li>
+<li class="flex items-center gap-2"><span class="size-1.5 rounded-full bg-primary"></span> Rapid or irregular heartbeat</li>
+<li class="flex items-center gap-2"><span class="size-1.5 rounded-full bg-primary"></span> Increased chest pain</li>
+</ul>
+</div>
+<h2>Physical Activity and Cardiac Rehab</h2>
+<p>Movement is medicine. While you must avoid heavy lifting (usually anything over 5-10 lbs) for the first 6-8 weeks, light walking is highly encouraged. Walking helps prevent blood clots and improves lung function.</p>
+<p>Most patients will be referred to a formal Cardiac Rehabilitation program. This supervised exercise and education program is proven to improve recovery outcomes and reduce the risk of future cardiac events.</p>
+</article>
+<section class="mt-16 pt-8 border-t border-slate-200 dark:border-slate-800">
+<div class="flex flex-col items-center justify-center p-8 bg-slate-50 dark:bg-slate-900/50 rounded-2xl text-center">
+<h3 class="text-xl font-bold mb-4">Was this article helpful?</h3>
+<div class="flex gap-4">
+<button class="flex items-center gap-2 px-6 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 hover:bg-white dark:hover:bg-slate-800 transition-all group">
+<span class="material-symbols-outlined text-slate-400 group-hover:text-green-500">thumb_up</span>
+<span>Yes, thanks!</span>
+</button>
+<button class="flex items-center gap-2 px-6 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 hover:bg-white dark:hover:bg-slate-800 transition-all group">
+<span class="material-symbols-outlined text-slate-400 group-hover:text-red-500">thumb_down</span>
+<span>Not really</span>
+</button>
+</div>
+</div>
+</section>
+</div>
+<aside class="lg:col-span-4 space-y-8">
+<div class="p-6 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm">
+<h3 class="font-bold text-lg mb-4">Patient Tools</h3>
+<div class="space-y-3">
+<button class="w-full flex items-center justify-between p-4 rounded-xl bg-primary text-white hover:bg-primary/90 transition-all font-bold">
+<span class="flex items-center gap-3">
+<span class="material-symbols-outlined">picture_as_pdf</span>
+                                        Download PDF Guide
+                                    </span>
+<span class="material-symbols-outlined text-sm">download</span>
+</button>
+<button class="w-full flex items-center gap-3 p-4 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all font-semibold">
+<span class="material-symbols-outlined">print</span>
+                                    Print Article
+                                </button>
+</div>
+</div>
+<div class="p-6 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm">
+<h3 class="font-bold text-lg mb-6">Related Resources</h3>
+<div class="space-y-6">
+<a class="group block" href="#">
+<div class="flex gap-4">
+<div class="size-16 rounded-lg overflow-hidden flex-shrink-0">
+<div class="w-full h-full bg-center bg-cover" data-alt="A healthy heart-friendly meal" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDlLHBtQcWeEQcaFEaxKw2pmzC9hwlwiko5yBG1lV7FByyYRfraAI4MPaDW2XvOMkl_Kwek_zSyuS5kVuDylK_tvFCdZ0BW3Yaf6LO8mcwKrxwJngaeQoxFJqliHaNeaRwE4VrGbWmOjU5RWqmYEEetnzCj3LLu4qdzPgYMA9KtEHCs_3RwyQObGh45aKb4-zydf8XP9u1p5RPZzUZ5hkqU9RxNs-kI4nLRzd1nwHrfEFIAjCne1IEf7FpzO4YOcl5c_CrhspTlaKQ");'></div>
+</div>
+<div>
+<h4 class="font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors line-clamp-2">Heart-Healthy Diet Post-Surgery</h4>
+<p class="text-xs text-slate-500 mt-1">8 min read</p>
+</div>
+</div>
+</a>
+<a class="group block" href="#">
+<div class="flex gap-4">
+<div class="size-16 rounded-lg overflow-hidden flex-shrink-0">
+<div class="w-full h-full bg-center bg-cover" data-alt="Stretching exercises icon" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB7fyCQUi2EonY0LdXadfU8TAqBXq2A-obRi5T4JhiaLkF8qN2C3aeSfRQfuh-ArRcj-kwtbwcA9X_eDqTFBz6pmkUZVyYVYArUdyhRr1voCGr65AUAXw1KPW_WcjcLtSn1xJ1ULsX4NJtPsFGx8lsYD6wDXOB1JvBD42XMbmK1MZPD0ztfg-ho2JNed_wa6GwHle9OAn6MOqO5PoEGrcNqvI5upnQy0zpKGZ6AaXQ7dywUkPrmCOsd0GPLjmasmSSbtj2ouOiZ-8Y");'></div>
+</div>
+<div>
+<h4 class="font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors line-clamp-2">Safe Exercises for Heart Patients</h4>
+<p class="text-xs text-slate-500 mt-1">15 min read</p>
+</div>
+</div>
+</a>
+<a class="group block" href="#">
+<div class="flex gap-4">
+<div class="size-16 rounded-lg overflow-hidden flex-shrink-0">
+<div class="w-full h-full bg-center bg-cover" data-alt="Medical pill bottles" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCJWrjm-SBelfGJM5t5rBR6axOhPh5c9M77PrE9EHTAdtP0YH346yZqAeQr9qNmFZ7cCNho9X1Wuv5tR12eFrSHA2irDNgYmUlzvYFXM5jwAkv23HrZS4aBtRm1O__qeDlwHPzMsQEdfku9MeMNT6OKNYBeyhmge5vFyp1DXhgwVwKmxnPBEB_IaIrnDtmYZQdt0qJqduWObh0JuaMphLD_aN-oa6t5WbbsbrIbp1FCtV5oCkccbuJCngJHyZOdIdgNwC-hVPC-hoo");'></div>
+</div>
+<div>
+<h4 class="font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors line-clamp-2">Understanding Your Medications</h4>
+<p class="text-xs text-slate-500 mt-1">10 min read</p>
+</div>
+</div>
+</a>
+</div>
+<button class="w-full mt-6 py-3 rounded-xl border-2 border-primary/20 text-primary font-bold hover:bg-primary hover:text-white transition-all">
+                                View Full Library
+                            </button>
+</div>
+<div class="p-8 bg-gradient-to-br from-primary to-orange-600 rounded-2xl text-white shadow-lg shadow-primary/20">
+<h3 class="text-xl font-black mb-2">Need Help?</h3>
+<p class="text-white/80 text-sm mb-6 leading-relaxed">Schedule a follow-up consultation with our cardiac specialists directly through the portal.</p>
+<button class="w-full py-3 bg-white text-primary font-bold rounded-xl hover:bg-slate-50 transition-colors">
+                                Book Appointment
+                            </button>
+</div>
+</aside>
+</div>
+</main>
+<footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 py-12 px-6 lg:px-20 mt-20">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex items-center gap-3 text-primary">
+<span class="material-symbols-outlined text-3xl">medical_services</span>
+<span class="text-slate-900 dark:text-white text-xl font-black">HealthSync</span>
+</div>
+<div class="flex gap-8 text-sm font-medium text-slate-500 dark:text-slate-400">
+<a class="hover:text-primary" href="#">Privacy Policy</a>
+<a class="hover:text-primary" href="#">Terms of Service</a>
+<a class="hover:text-primary" href="#">Medical Disclaimer</a>
+<a class="hover:text-primary" href="#">Contact Us</a>
+</div>
+<p class="text-slate-400 text-sm">© 2024 HealthSync Medical Library. All rights reserved.</p>
+</div>
+</footer>
+</div>
+</div>
+</body></html>
